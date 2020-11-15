@@ -1,0 +1,85 @@
+@charset "iso-8859-1";
+/* CSS Document */
+
+		#bg {
+			position:fixed; 
+			top:-50%; 
+			left:-50%; 
+			width:200%; 
+			height:200%;
+		}
+		#bg img {
+			position:absolute; 
+			top:0; 
+			left:0; 
+			right:0; 
+			bottom:0; 
+			margin:auto; 
+			min-width:50%;
+			min-height:50%;
+			z-index:-1;
+		}
+		.scrolling {
+	z-index: 2;
+	top:586px;
+	left:450px;
+	width:666px;
+	height:30px;
+	position: absolute;
+}
+
+		
+		#page-wrap {
+	line-height:24px;
+	position: relative;
+	z-index: 2;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+	/*margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 380px;*/
+	font-size: 18px;
+}
+.itgeo{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	text-align: right;
+}
+.itgeoleft{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	text-align: left;
+}
+.itgeo p{
+	margin:0px;
+	display: block;
+}
+		p {
+	margin: 0 0 25px;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	
+	line-height: 24px;
+	font-weight: normal;
+}
+.blue{
+	color: #0099CC;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	margin-right: 10px;
+}
+#apDiv1 div {
+	font-family: Tahoma;
+	font-size: 20px;
+	color: #2c8ef1;
+	line-height: 40px;
+
+}

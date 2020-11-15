@@ -1,0 +1,81 @@
+body {
+	background-color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	
+	SCROLLBAR-FACE-COLOR: #5B485E; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #5B485E; 
+	SCROLLBAR-SHADOW-COLOR: #000000; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+	SCROLLBAR-TRACK-COLOR: #111111; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000;
+	
+}
+.style10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 18px;
+	}
+.style12 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+}
+.style14 {
+	font-family: Verdana, Arial, Helvetica, sans-serif; color: #ffffff; 
+	font-size: 16px; 
+}
+
+.style20 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #660000;
+	font-size: 18px;
+	}
+.style22 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #660000;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+}
+.style24 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #660000;
+	font-size: 16px;
+	filter: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=true);
+	height: 10px;
+}
+.style25 {
+	font-size: 15px;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+a {
+	font-size: 14px;
+	color: #886666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+a.la { font-weight: normal; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FF9900; text-decoration:underline; }
+a.la:visited { font-weight: normal; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FF9900; text-decoration:underline;}
+a.la:active { font-weight: normal; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FF9900; text-decoration:underline; }
+a.la:hover { font-weight: normal; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FF9900; text-decoration:underline; }

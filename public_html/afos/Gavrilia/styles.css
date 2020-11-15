@@ -1,0 +1,56 @@
+body {
+	background-color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg2.jpg);
+	
+	SCROLLBAR-FACE-COLOR: #5B485E; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #5B485E; 
+	SCROLLBAR-SHADOW-COLOR: #000000; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+	SCROLLBAR-TRACK-COLOR: #111111; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000;
+	
+}
+.style1 {color: #FFFFFF}...style2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+.style3 {
+	color: #FFFFFF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 24px;
+	font-size: 16px;
+}
+.style4 {
+	color: #FF91FF;
+	font-size: 36px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style6 {font-size: 18px}
+a {
+	font-size: 16px;
+	color: #AAAA66;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+a.la { font-weight: normal;font-family: Georgia, "Times New Roman", Times, serif;color: #FFEE22;text-decoration:underline; }
+a.la:visited { font-weight: normal;font-family: Georgia, "Times New Roman", Times, serif;font-size: 16px;color: #FFEE22;text-decoration:underline;}
+a.la:active { font-weight: normal;font-family: Georgia, "Times New Roman", Times, serif;font-size: 16px;color: #FFEE22;text-decoration:underline; }
+a.la:hover { font-weight: normal;font-family: Georgia, "Times New Roman", Times, serif;font-size: 16px;color:#FFEE22; text-decoration:underline; }

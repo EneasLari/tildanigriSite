@@ -1,0 +1,117 @@
+@charset "iso-8859-7";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg_1.jpg);
+	background-color: #200062;
+	
+	
+	SCROLLBAR-FACE-COLOR: #5B485E; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #5B485E; 
+	SCROLLBAR-SHADOW-COLOR: #000000; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+	SCROLLBAR-TRACK-COLOR: #111111; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000;
+}
+.style8 {
+	font-size: 24px;
+}
+.style9 {
+	font-size: 30px;
+}
+.style9 {
+	font-size: 18px;
+}
+.style1 {
+	font-size: 17px;
+	font-family: "Comic Sans MS";
+	color: #333333;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #EBEDF3;
+}
+.nostrad {
+	font-size: 16px;
+	font-family: Arial;
+	color: #515166;
+	font-weight: normal;
+	font-style: italic;
+	background-color: #FFFFCC;
+	width: 100%;
+	line-height: 24px;
+}
+.title1 {
+	font-size: 30px;
+	font-family: "Arial";
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+}
+.title2 {
+	font-size: 18px;
+	font-family: Arial;
+	color: #333333;
+	font-weight: normal;
+	font-style: normal;
+}
+.michel {
+	font-size: 17px;
+	font-family: "Comic Sans MS";
+	color: #000000;
+	font-weight: normal;
+	font-style: italic;
+	background-color: #FFFFCC;
+}
+.style3 {
+	font-size: 24px;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+a:link {
+	color: #0000CC;
+}
+a:visited {
+	color: #0000CC;
+}
+a:hover {
+	color: #993300;
+}
+a:active {
+	color: #0000CC;
+}
+.apDiv1 {
+	font-family: "Comic Sans MS";
+	font-size: 17px;
+	color: #333333;
+	padding: 4px;
+	width: 99%;
+	text-align: justify;
+	background-color: #EBEDF3;
+}
+.apDiv2 {
+	float: right;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+}
+.apDiv3 {
+	float: left;
+	margin-top: 0px;
+	margin-right: 4px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+a.la { 	font-size: 17px;
+	font-family: "Comic Sans MS";color: #AC4131;text-decoration:underline; }
+a.la:visited { 	font-size: 17px;
+	font-family: "Comic Sans MS";color: #AC4131;text-decoration:underline;}
+a.la:active { 	font-size: 17px;
+	font-family: "Comic Sans MS";color: #AC4131;text-decoration:underline; }
+a.la:hover { 	font-size: 17px;
+	font-family: "Comic Sans MS";color:#AC4131; text-decoration:underline; }

@@ -1,0 +1,47 @@
+@charset "iso-8859-7";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url();
+	background-color: #9DACBF;
+	
+	
+	SCROLLBAR-FACE-COLOR: #ffc000; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffc000; 
+	SCROLLBAR-SHADOW-COLOR: #B84534; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffc000; 
+	SCROLLBAR-ARROW-COLOR: #B84534; 
+	SCROLLBAR-TRACK-COLOR: #B84534; 
+	SCROLLBAR-DARKSHADOW-COLOR: #B84534;
+}
+.style8 {
+	font-size: 24px;
+}
+.style9 {
+	font-size: 30px;
+}
+.style1 {
+	font-size: 17px;
+	font-family: "Comic Sans MS";
+	color: #660066;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+a:link {
+	color: #0000CC;
+}
+a:visited {
+	color: #0000CC;
+}
+a:hover {
+	color: #993300;
+}
+a:active {
+	color: #0000CC;
+}

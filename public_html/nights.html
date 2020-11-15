@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Μαθήματα Μεταφυσικής</title>
+  <link rel="shortcut icon" href="../logo.png">
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="stylesheet" type="text/css" media="all" href="style.css">
+  <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.0.6"></script>
+  <style type="text/css">
+<!--
+.style1 {
+	font-family: "Myriad Pro";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 12px;
+	color: #000000;
+}
+.style2 {
+	font-family: "Myriad Pro";
+	font-weight: bold;
+	font-size: 16px;
+	color:#FFFFFF;	
+}
+.style3 {
+	font-family: "Myriad Pro";
+	font-weight: bold;
+	font-size: 23px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.style6 {
+		font-family: "Myriad Pro";
+		font-weight: bold;
+		font-size: 16px;
+		color: #000000;	
+	}
+.stylekryfo{
+	font-family: "Myriad Pro";
+		font-weight: bold;
+		font-size: 8px;
+		color: #FFFFFF;
+	}
+-->
+  </style>
+</head>
+
+<body>
+<div align="left" id="wrapper">
+<table align="left"  border="0" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td><a class="modalbox" href="#inline"><img src="nights3.jpg" width="1100" height="619" border="0"></a></td>
+  </tr>
+</table>
+</div>
+
+<div><span class="stylekryfo">Βραδιές Μεταφυσικής στο κέντρο της Αθήνας, Τίλντα Νέγρη, Το Εν, to-en.gr</span></div>
+
+<div align="center">
+        <table width="300" align="right" border="0">
+            <tr>
+                 <td align="left" class="style3"><a onClick="history.go(-1);return true;">Back</a></td>
+            </tr>
+        </table>
+</div>
+
+<!-- hidden inline form -->
+<div id="inline">
+	<h2><span class="style6">Αποστολή μηνύματος στο info@to-en.gr</span></h2>
+
+<form id="contact" name="contact" action="#" method="post">
+		<p><span class="style5">Ονοματεπώνυμο:</span><br/>
+		<input type="name" id="name" name="name" class="txt">
+		<br>
+		<p><span class="style5">Θέμα:</span><br/>
+		<input type="subject" id="subject" name="subject" class="txt">
+		<br>
+        <p><span class="style5">Το Email σας:</span><br>
+		<input type="email" id="email" name="email" class="txt">
+		<br>
+		<p><span class="style5">Μήνυμα:</span>
+		<textarea id="msg" name="msg" class="txtarea"></textarea>
+		
+		<button id="send">Αποστολή</button>
+  </form>
+</div>
+
+<!-- basic fancybox setup -->
+<script type="text/javascript">
+	function validateEmail(email) { 
+		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return reg.test(email);
+	}
+
+	$(document).ready(function() {
+		$(".modalbox").fancybox();
+		$("#contact").submit(function() { return false; });
+
+		
+		$("#send").on("click", function(){
+			var name      = $("#name").val();
+			var subject   = $("#subject").val();
+			var emailval  = $("#email").val();
+			var msgval    = $("#msg").val();
+			var msglen    = msgval.length;
+			var mailvalid = validateEmail(emailval);
+			
+			if(mailvalid == false) {
+				$("#email").addClass("error");
+			}
+			else if(mailvalid == true){
+				$("#email").removeClass("error");
+			}
+			
+			if(msglen < 4) {
+				$("#msg").addClass("error");
+			}
+			else if(msglen >= 4){
+				$("#msg").removeClass("error");
+			}
+			
+			if(mailvalid == true && msglen >= 4) {
+				// if both validate we attempt to send the e-mail
+				// first we hide the submit btn so the user doesnt click twice
+				$("#send").replaceWith("<em>sending...</em>");
+				
+				$.ajax({
+					type: 'POST',
+					url: 'sendmessage.php',
+					data: $("#contact").serialize(),
+					success: function(data) {
+						if(data == "true") {
+							$("#contact").fadeOut("fast", function(){
+								$(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");
+								setTimeout("$.fancybox.close()", 1000);
+							});
+						}
+					}
+				});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

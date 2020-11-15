@@ -1,0 +1,119 @@
+body{
+	background-position:center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-repeat: repeat-y;
+	background-image:url("yellow_bg.jpg");
+	background-color:#7f8a8c;
+}
+
+
+
+#box_link_p13 { 
+		position: absolute; 
+		top: 3535px; 
+		right: 20%; 
+		width: 235px; 
+		height: 20px; 
+		background-color: transparent; 
+		border: 0px solid yellow; }
+
+#box_link_p13_en { 
+		position: absolute; 
+		top: 3526px; 
+		right: 26%; 
+		width: 235px; 
+		height: 20px; 
+		background-color: transparent; 
+		border: 0px solid yellow; }
+
+#inline { display: none; width: 600px; }
+
+/*             Tables*/
+.head_photo{
+	top:100px;
+}
+.index_page{
+    position:absolute;
+	top:100px; left:20%;
+	z-index:1;
+}
+
+.about{
+	position:absolute;
+	top:150px;
+	right:25%;	
+}
+.bottom{
+	width:100%;
+	position:absolute;
+	bottom:6;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+
+/*            Fonts*/
+.headFont{
+	color: #000000;
+	font-family: "Comic Sans MS";
+	font-size: 50px;
+	font-style: normal;
+}
+.myLinkButtons{
+	text-decoration:none;
+}
+.myFont{
+	color: #000000;
+	font-family: "Comic Sans MS";
+	font-size: 20px;
+	font-style: normal;
+	text-align: justify;
+}
+p.quote{
+	font-family:"Segoe UI";
+	src: url(fonts/Segoe.ttf) format("truetype");
+	font-size: 9pt;
+	font-style:italic;
+	font-weight:bold;
+	color:#d4d4d4;
+	width:700px;
+	z-index:1;
+}
+.contactForm{
+	font-family:"Aero Matics";
+	src: url(fonts/Aero Matics Regular.ttf) format("truetype");
+	font-size:11pt;
+	color: #d4d4d4;
+}/*
+.myFont{
+	font-family:"Segoe UI";
+	src: url(fonts/Segoe.ttf) format("truetype");
+	font-size: 9pt;
+	font-weight:bold;
+	text-align: justify;
+	text-align-last: left;
+	color: #c0c0c0;
+}*/
+.bottom_font a{
+	font-family:"Segoe UI";
+	src: url(fonts/Segoe.ttf) format("truetype");
+	font-size: 13pt;
+	font-weight:bold;
+	text-decoration: none;
+	color: #4d4d4d;
+}
+
+.index_font a{
+	font-family:"Comic Sans MS";
+	src: url("fonts/comic.ttf");
+	font-size: 17pt;
+	line-height: 175%;
+	font-weight:bold;
+	text-decoration: none;
+	color: #4d4d4d;
+}
+
+

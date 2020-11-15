@@ -1,0 +1,115 @@
+@charset "iso-8859-7";
+/* CSS Document */
+/* 
+	background-image:url(images/bg5.jpg);
+	background-position: center;
+	background-repeat: repeat-y;       
+*/
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000000;	
+	/*background-image:url(images/bg_01.jpg);*/
+	background-repeat:no-repeat;
+	SCROLLBAR-FACE-COLOR: #B84534;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffc000;
+	SCROLLBAR-SHADOW-COLOR: #B84534;
+	SCROLLBAR-3DLIGHT-COLOR: #B84534;
+	SCROLLBAR-ARROW-COLOR: #B84534;
+	SCROLLBAR-TRACK-COLOR: #336633;
+	SCROLLBAR-DARKSHADOW-COLOR: #B84534;
+}
+
+
+/*****************************/
+/*****************************/
+.myArial{
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #dfdcd5; /*sub-white geo*/
+	/*font-weight: bold;
+	font-style: italic;*/
+	line-height:40px;	
+}
+
+.myArial2{
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #dfdcd5; /*sub-white geo*/
+	/*font-weight: bold;
+	font-style: italic;*/
+	line-height:25px;	
+}
+/*****************************/
+/*****************************/
+
+
+
+.style8 {
+	font-size: 36px;
+}
+.la {
+	text-decoration: underline;
+}
+.style1 {
+	/*font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-weight: normal;
+	font-style: normal;*/
+	
+	/*font-family: tahoma;*/
+	font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 24px;
+	color: #dfdcd5; /*sub-white geo*/
+	background-color:#000000;
+	font-style: normal;
+    
+}
+
+.myArial {
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #dfdcd5; /*sub-white geo*/
+	font-weight: normal;
+	font-style: normal;
+	line-height: 22px;
+}
+.title {
+	font-size: 28px;
+	line-height: 35px; /*LINE HEIGHT TITLE*/
+}
+a:link {
+	color: #336633;
+	font-weight: bold;
+}
+a:visited {
+	color: #336633;
+	font-weight: bold;
+}
+a:hover {
+	color: #993300;
+}
+a:active {
+	color: #336633;
+}
+.underlined {
+	text-decoration: underline;
+}
+.notes {font-style: italic; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px;}
+a.la { font-weight: normal; font-size: 17px; font-family: Arial, Helvetica, sans-serif; color: #AC4131; text-decoration:underline; }
+a.la:visited { font-weight: normal; font-size: 17px; font-family: Arial, Helvetica, sans-serif; color: #AC4131; text-decoration:underline;}
+a.la:active { font-weight: normal; font-size: 17px; font-family: Arial, Helvetica, sans-serif; color: #AC4131; text-decoration:underline; }
+a.la:hover { font-weight: normal; font-size: 17px; font-family: Arial, Helvetica, sans-serif; color: #AC4131; text-decoration:underline; }
+
+
+/*GEO CSS*/
+
+.sides {
+	background-color:#000; /*The vertical lines between the text*/	
+}

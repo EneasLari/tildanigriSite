@@ -1,0 +1,61 @@
+.title{
+	font-family:"Comic Sans MS", cursive;
+	font-size: 40px;
+	font-style: normal;
+	color:#ffffff;
+	text-align:left;
+}
+.dots{
+	font-family:"Comic Sans MS", cursive;
+	font-size: 52px;
+	font-style: normal;
+	color:#ffffff;
+	letter-spacing:6px;
+	text-align:left;
+}
+.buttons{
+	width:95%;
+	position:absolute;
+	margin-left:auto;
+	margin-right:auto;
+}
+.normalButtons{
+	font-family:"Comic Sans MS", cursive;
+	font-size:16px;
+	font-style:normal;
+	color:#ffffff;
+}
+.italicButtons{
+	font-family:"Comic Sans MS", cursive;
+	font-size:16px;
+	font-style:italic;
+	color:#ffffff;
+}
+
+.background{
+	background-repeat:no-repeat;
+}
+.centerFont{
+	font-family:"Comic Sans MS", cursive;
+	font-size:17px;
+	font-style:italic;
+	color:#ffffff;
+	text-align:center;
+}
+.rightColumnFont{
+	font-family:"Comic Sans MS", cursive;
+	font-size:17px;
+	font-style:italic;
+	color:#ffffff;
+	text-align:left;
+}
+.leftColumnFont{
+	font-family:"Comic Sans MS", cursive;
+	font-size:17px;
+	font-style:italic;
+	color:#ffffff;
+	text-align:right;
+}
+.yellowFont{
+	color:#ffffa4;	
+}

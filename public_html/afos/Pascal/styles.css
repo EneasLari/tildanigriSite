@@ -1,0 +1,33 @@
+@charset "iso-8859-7";
+/* CSS Document */
+body {
+	background-color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a {
+	font-size: 16px;
+	color: #669966;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #669966;
+}
+a:hover {
+	text-decoration: underline;
+	color: #669966;
+}
+a:active {
+	text-decoration: none;
+	color: #669966;
+}
+a.la { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la:visited { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline;}
+a.la:active { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la:hover { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }

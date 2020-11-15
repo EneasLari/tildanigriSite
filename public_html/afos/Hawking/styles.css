@@ -1,0 +1,68 @@
+@charset "iso-8859-7";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url();
+	background-color: #9DACBF;
+	
+	
+	SCROLLBAR-FACE-COLOR: #5B485E; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #5B485E; 
+	SCROLLBAR-SHADOW-COLOR: #000000; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+	SCROLLBAR-TRACK-COLOR: #111111; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000;
+}
+.style8 {
+	font-size: 24px;
+}
+.style9 {
+	font-size: 30px;
+}
+.style1 {
+	font-size: 17px;
+	font-family: "Comic Sans MS";
+	color: #666699;
+	font-weight: normal;
+	font-style: normal;
+}
+.style2 {
+	font-size: 16px;
+	font-family: "Comic Sans MS";
+	color: #333333;
+	font-weight: normal;
+	font-style: normal;
+}
+a {
+	font-size: 16px;
+	color: #669966;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+a:link {
+		text-decoration: none;
+}
+a:visited {
+		text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	color: #993300;
+}
+a:active {
+		text-decoration: none;
+}
+
+a.la { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la:visited { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline;}
+a.la:active { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la:hover { font-weight: normal; font-size: 17px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+
+a.la2 { font-weight: normal; font-size: 16px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la2:visited { font-weight: normal; font-size: 16px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline;}
+a.la2:active { font-weight: normal; font-size: 16px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }
+a.la2:hover { font-weight: normal; font-size: 16px; font-family: "Comic Sans MS"; color: #AC4131; text-decoration:underline; }

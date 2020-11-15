@@ -1,0 +1,45 @@
+body {
+	background-image:   url("../../antlodas fos/Sufi-Indoi-Zen-Tao/images/bg_tile2.jpg");
+	background-repeat: repeat-x;
+	background-color: #000000;
+	margin-top: 50px;
+	
+	SCROLLBAR-FACE-COLOR: #5B485E; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #5B485E; 
+	SCROLLBAR-SHADOW-COLOR: #000000; 
+	SCROLLBAR-3DLIGHT-COLOR: #000000; 
+	SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+	SCROLLBAR-TRACK-COLOR: #111111; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000;
+}
+.style1 {
+	color: #41497A;
+	font-family: "Comic Sans MS";
+	font-size: 18px;
+	padding: 10px;
+	line-height: 22px;
+}
+a:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+}

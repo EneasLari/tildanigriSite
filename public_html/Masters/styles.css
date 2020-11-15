@@ -1,0 +1,101 @@
+@charset "iso-8859-1";
+/* CSS Document */
+
+a{
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+a:link{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+a:visited{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a:hover{
+	color:#E8FAFF;
+	text-decoration: underline;
+}		
+
+#bg {
+			position:fixed; 
+			top:-50%; 
+			left:-50%; 
+			width:200%; 
+			height:200%;
+		}
+		#bg img {
+			position:absolute; 
+			top:0; 
+			left:0; 
+			right:0; 
+			bottom:0; 
+			margin:auto; 
+			min-width:50%;
+			min-height:50%;
+		}
+		
+		#page-wrap {
+		line-height:24px;
+	position: relative;
+	z-index: 2;
+	width: 600px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 380px;
+	font-size: 18px;
+}
+.itgeo{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	text-align: right;
+}
+
+.itgeobig{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-style: italic;
+	text-align: left;
+}
+
+
+.itgeoleft{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	text-align: left;
+}
+.itgeo p{
+	margin:0px;
+	display: block;
+}
+		p {
+	margin: 0 0 25px;
+	font-family: tahoma;
+	font-size: 17px;
+	line-height: 24px;
+	font-weight: normal;
+	text-align: justify;
+}
+.blue{
+	color: #0099CC;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+.til {
+	font-family: Arial, Helvetica, sans-serif;
+}
