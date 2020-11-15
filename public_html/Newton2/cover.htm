@@ -4,7 +4,7 @@
 <link rel="shortcut icon" href="../logo.png">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 40px;
@@ -36,7 +36,7 @@ a:active {
 .style1 {color: #99CC33}
 .style2 {color: #610433;font-size: 8px; }
 
--->
+
 #apDiv3 {
 		position:absolute;
 		z-index:4;
@@ -47,7 +47,7 @@ a:active {
 </style>
 </head>
 
-<body>
+<body id="clicktoplaymusic">
 
 
 <div id="apDiv3">
@@ -67,6 +67,22 @@ a:active {
 </table>
 
 <div>
-<audio loop="true" autoplay="true" src="Destiny_cover.mp3"></div>
+	<audio id="audiotoplay" autoplay="true" src="Destiny_cover.mp3"></audio>
+	<script type="text/javascript">
+		const holepagebutton = document.getElementById("clicktoplaymusic");
+		const audio = document.getElementById("audiotoplay");
+
+		holepagebutton.addEventListener("click", () => {
+			if (audio.paused) {
+				audio.volume = 1.0;
+				audio.play();
+
+			} else {
+				audio.pause();
+			}
+		});
+	</script>
+</div>
+
 </body>
 </html>
