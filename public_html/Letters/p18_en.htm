@@ -1,68 +1,103 @@
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
-<title>Letters to an Old Friend - The great quest of the other half - TO EN</title>
-<link rel="shortcut icon" href="../logo.png">
-<link href="styles.css" rel="stylesheet" type="text/css">
-<script src="AC_RunActiveContent.js" type="text/javascript"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+  <title>Letters to an Old Friend - The great quest of the other half - TO EN</title>
+  <link rel="shortcut icon" href="../logo.png">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="../scrollingtitle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<table  border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td valign="top"><img src="images/block_guide.jpg" width="140" height="89"></td>
-    <td><table width="780"  border="0" align="left" cellpadding="0" cellspacing="16">
-      <tr>
-        <td colspan="2"><div align="center">
-          <p class="style2">18. The great quest of the other  half<span class="style2"> </span></p>
-          </div></td>
-      </tr>
-      <tr>
-        <td valign="top">&nbsp;</td>
-        <td><div align="right">
-          <script type="text/javascript">
-AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','294','height','45','src','p18_en','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','p18_en' ); //end AC code
-            </script>
-          <noscript>
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="294" height="45">
-              <param name="movie" value="p18_en.swf">
-              <param name="quality" value="high">
-              <embed src="p18_en.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="294" height="45"></embed>
-            </object>
-            </noscript>
-        </div></td>
-      </tr>
-      <tr>
-        <td width="50%" valign="top" class="style5"><div align="justify">
-          <p><span class="style6">I</span>t's high noon and everything  is quiet. I am full of thoughts regarding attitudes I had once adopted and whose truth I had deeply believed  in  ... My needs made me see  different things in others than what they  had in reality. </p>
-          <p> My intense insecurity, the deception of my feelings, made me  vulnerable and ready to believe in more than what people, whom I shared my life  with at times, had. </p>
-        </div></td>
-        <td valign="top">          <img src="images/p18_clip_image002.jpg" width="464" height="310" > </td>
-      </tr>
-      <tr>
-        <td colspan="2" valign="top" class="style5"  ><p align="justify">The great quest of the other half, which of course I  searched for in vain, made me glamourize situations, people and patterns, and  when I fell from the clouds, I hurt myself more than others who had a  stronger grip. Maybe I exaggerate a little, but you do so when your  sentimentalism is uncontrolled. <br>
-              <br>
-          When things take their time distance, and when life  gives its knowledge to you freely,  others become open books to you, which have  only one reality: the truth you experienced, the truth you ached to understand.  Then the attitudes don't surprise you that easily, because they were you a little  while before ...  <br>
-        </p>
-          <div align="justify">Nevertheless, I miss you. You are the essence of a carefree state of  mind that understanding of existence brings. I love you.</div></td>
-        </tr>      <tr>
-        <td valign="top">&nbsp;</td>
-        <td valign="top">&nbsp;</td>
-      </tr>
-      <tr>
-        <td colspan="2" valign="top"><div align="center">
-          <table width="500"  border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td width="33%"><div align="center"><a href="p17_en.htm">Previous</a></div></td>
-              <td width="33%"><div align="center"><a href="p0_en.htm">Home</a><br><a href="../home_en.htm">Main menu</a></div></td>
-              <td><div align="center"><a href="p19_en.htm">Next</a></div></td>
-            </tr>
-          </table>
-        </div></td>
-        </tr>
-    </table>
-	</td>
-  </tr>
-</table>
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top"><img src="images/block_guide.jpg" width="140" height="89"></td>
+      <td>
+        <table width="780" border="0" align="left" cellpadding="0" cellspacing="16">
+          <tr>
+            <td colspan="2">
+              <div align="center">
+                <p class="style2">18. The great quest of the other half<span class="style2"> </span></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td>
+              <div align="right">
+                <div id="scrollingTitle" style="visibility: hidden;">
+                  <p id="inlinetext">TEXT Title</p>
+                </div>
+                <audio controls id="audiotoplay" src="mp3/p01.mp3" type="audio/mpeg"></audio>
+                <script>
+                  var titlediv = document.getElementById("scrollingTitle");
+                  console.log(document.getElementById("scrollingTitle").scrollWidth);
+                  console.log(document.getElementById("audiotoplay").scrollWidth);
+                  document.getElementById("scrollingTitle").style.width = document.getElementById("audiotoplay")
+                    .clientWidth + 'px';
+                  document.getElementById("audiotoplay").onplay = function () {
+                    titlediv.className = "scrollingTitle";
+                    titlediv.style.visibility = "visible";
+                  }
+                </script>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top" class="style5">
+              <div align="justify">
+                <p><span class="style6">I</span>t's high noon and everything is quiet. I am full of thoughts regarding
+                  attitudes I had once adopted and whose truth I had deeply believed in ... My needs made me see
+                  different things in others than what they had in reality. </p>
+                <p> My intense insecurity, the deception of my feelings, made me vulnerable and ready to believe in more
+                  than what people, whom I shared my life with at times, had. </p>
+              </div>
+            </td>
+            <td valign="top"> <img src="images/p18_clip_image002.jpg" width="464" height="310"> </td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top" class="style5">
+              <p align="justify">The great quest of the other half, which of course I searched for in vain, made me
+                glamourize situations, people and patterns, and when I fell from the clouds, I hurt myself more than
+                others who had a stronger grip. Maybe I exaggerate a little, but you do so when your sentimentalism is
+                uncontrolled. <br>
+                <br>
+                When things take their time distance, and when life gives its knowledge to you freely, others become
+                open books to you, which have only one reality: the truth you experienced, the truth you ached to
+                understand. Then the attitudes don't surprise you that easily, because they were you a little while
+                before ...  <br>
+              </p>
+              <div align="justify">Nevertheless, I miss you. You are the essence of a carefree state of mind that
+                understanding of existence brings. I love you.</div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top">
+              <div align="center">
+                <table width="500" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="33%">
+                      <div align="center"><a href="p17_en.htm">Previous</a></div>
+                    </td>
+                    <td width="33%">
+                      <div align="center"><a href="p0_en.htm">Home</a><br><a href="../home_en.htm">Main menu</a></div>
+                    </td>
+                    <td>
+                      <div align="center"><a href="p19_en.htm">Next</a></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+
 </html>
