@@ -27,24 +27,19 @@
             </td>
             <td>
               <div align="right">
-                <script type="text/javascript">
-                  AC_FL_RunContent('codebase',
-                    'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0', 'width',
-                    '294', 'height', '45', 'src', 'p50_en', 'quality', 'high', 'pluginspage',
-                    'http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash', 'movie',
-                    'p50_en'); //end AC code
+                <div id="scrollingTitle" style="visibility: hidden;height: 50px;">
+                  <p id="inlinetext">TEXT Title</p>
+                </div>
+                <audio controls id="audiotoplay" src="mp3/p01.mp3" type="audio/mpeg"></audio>
+                <script>
+                  var titlediv = document.getElementById("scrollingTitle");
+                  document.getElementById("scrollingTitle").style.width = document.getElementById("audiotoplay")
+                    .clientWidth + 'px';
+                  document.getElementById("audiotoplay").onplay = function () {
+                    titlediv.className = "scrollingTitle";
+                    titlediv.style.visibility = "visible";
+                  }
                 </script>
-                <noscript>
-                  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-                    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
-                    width="294" height="45">
-                    <param name="movie" value="p50_en.swf">
-                    <param name="quality" value="high">
-                    <embed src="p50_en.swf" quality="high"
-                      pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
-                      type="application/x-shockwave-flash" width="294" height="45"></embed>
-                  </object>
-                </noscript>
               </div>
             </td>
           </tr>
