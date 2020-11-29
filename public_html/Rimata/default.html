@@ -25,10 +25,7 @@
 				type="application/x-shockwave-flash" width="1" height="1"></embed>
 		</object></noscript> -->
 
-		<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-		<audio id="player" autoplay>
-			<source src="Rimata.mp3" type="audio/mp3">
-		</audio>
+	<!-- Autoplay is allowed. -->
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 	<script src="js/effects.core.js"></script>
@@ -119,6 +116,8 @@
 	<div id="nextthumb"></div>
 
 
+
+
 	<!--Control Bar-->
 	<div id="controls-wrapper">
 		<div id="controls">
@@ -142,6 +141,32 @@
 
 		</div>
 	</div>
+
+	<div id="controls-wrapper"  style="position:relative;">
+		<div style="position: fixed;right:10px;bottom:10px">
+			<audio id="player" autoplay>
+				<source src="Rimata.mp3" type="audio/mp3">
+			</audio>
+		</div>
+
+		<script>
+			var audioElement = document.getElementById("player");
+			console.log(audioElement);
+			var playPromise = audioElement.play();
+			if (playPromise !== undefined) {
+				playPromise.then(_ => {
+						// Automatic playback started!
+						// Show playing UI.
+						console.log("goodboy")
+					})
+					.catch(error => {
+						var controlsattribute=document.createAttribute("controls");
+						audioElement.setAttributeNode(controlsattribute);
+					});
+			}
+		</script>
+	</div>
+
 	<div> Ρήματα - ΤΟ ΕΝ, to-en </div>
 </body>
 
