@@ -5,6 +5,8 @@
 <head>
 
 	<title>TO EN</title>
+
+	<link rel="shortcut icon" href="../logo.png">
 	<style type="text/css">
 		body {
 
@@ -41,7 +43,27 @@
 		h3 {
 			padding-top: 20px;
 		}
+
 	</style>
+
+
+
+	<!-- Load player theme -->
+
+	<link rel="stylesheet" href="theme/style.css" type="text/css" media="screen" />
+
+
+
+	<!-- Load jquery -->
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+
+
+
+	<!-- load projekktor -->
+
+	<script type="text/javascript" src="projekktor.min.js"></script>
+
 
 
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -54,41 +76,12 @@
 </head>
 
 <body>
-	<iframe id="youtubevideo" width="840" height="500"
-		src="https://www.youtube.com/embed/RC3FHZXB1YM?rel=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&enablejsapi=1"
-		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen></iframe>
+	<video preload="auto" id="player_a" class="projekktor" poster="projector/1.jpg" title="to en" width="840" height="500"
+		preload="none" controls autoplay="autoplay" onended="window.location = 'home.htm';">
 
-	<script type="text/javascript">
-		var tag = document.createElement('script');
-		tag.id = 'iframe-demo';
-		tag.src = 'https://www.youtube.com/iframe_api';
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		<source src="1.ogg" type="video/ogg" />
 
-		var player;
-
-		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('youtubevideo', {
-				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		}
-
-		function onPlayerReady(event) {}
-
-		function OnStateChange(playerStatus) {
-			if (playerStatus == 0) {
-				window.location = 'home.htm'
-			}
-		}
-
-		function onPlayerStateChange(event) {
-			OnStateChange(event.data);
-		}
-	</script>
+	</video>
 
 	</div>
 
@@ -109,6 +102,39 @@
 
 
 
+	<p>
+		<script type="text/javascript">
+			$(document).ready(function () {
+
+				projekktor('#player_a', {
+
+					loop: false,
+
+					autoplay: true,
+
+					enableKeyboard: false,
+
+					enableFullscreen: false,
+
+					controls: false,
+
+					start: false,
+
+					stop: false,
+
+					disablePause: true,
+
+					fixedVolume: true,
+
+					poster: true,
+
+					defaultPoster: 'projector/1.jpg'
+
+				});
+
+			});
+		</script>
+	</p>
 	<h1 class="style1"> http://www.to-en.gr </h1>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
