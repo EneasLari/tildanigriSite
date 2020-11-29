@@ -125,18 +125,77 @@ Website: www.buildinternet.com/project/supersized
 					});
 					
 				    //Play/Pause Button
+					$('img[name ="deleteme"]').ready(function() {
+						console.log("Ready");
+				    	if($.inAnimation) return false;
+				    	var src = ($(this).attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png";
+						$(this).attr("src", "images/pause.png");
+						console.log(src);
+						clearInterval(slideshow_interval);
+						$.paused = true;
+						$(this).attr("src", src);
+						return false;
+				    });
+
+
+					$('#onlyplay').click(function() {
+						if($.inAnimation) return false;
+						console.log(($('#pauseplay').attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png");
+						var src = ($(this).attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png";
+						console.log(src);
+      					if (src == "images/pause.png"){
+							$('#pauseplay').attr("src", "images/play.png");
+      						$.paused = false;
+							slideshow_interval = setInterval(nextslide, options.slide_interval); 
+							console.log("MOMOMOMO");
+							$(this).remove();
+							
+				        }else{
+				        	$('#pauseplay').attr("src", "images/pause.png");
+				        	clearInterval(slideshow_interval);
+							$.paused = true;
+						}
+						$('#pauseplay').attr("src", src);
+					    return false;
+					});
+					
+					$('#onlyplay').mouseover(function() {
+				    	var imagecheck = ($(this).attr("src") === "images/play_dull.png");
+				    	if (imagecheck){
+      						$(this).attr("src", "images/play.png"); 
+				        }else{
+				        	$(this).attr("src", "images/pause.png");
+				        }
+				    });
+				    
+				    $('#onlyplay').mouseout(function() {
+				    	var imagecheck = ($(this).attr("src") === "images/play.png");
+				    	if (imagecheck){
+      						$(this).attr("src", "images/play_dull.png"); 
+				        }else{
+				        	$(this).attr("src", "images/pause_dull.png");
+				        }
+				        return false;
+				    });
+
+
+				    //Play/Pause Button
 				    $('#pauseplay').click(function() {
 				    	if($.inAnimation) return false;
 				    	var src = ($(this).attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png";
       					if (src == "images/pause.png"){
       						$(this).attr("src", "images/play.png");
       						$.paused = false;
-					        slideshow_interval = setInterval(nextslide, options.slide_interval);  
+							slideshow_interval = setInterval(nextslide, options.slide_interval); 
+							var imgtodelete=$('img[name ="deleteme"]');
+							if(imgtodelete){
+								imgtodelete.remove(); 
+							}
 				        }else{
 				        	$(this).attr("src", "images/pause.png");
 				        	clearInterval(slideshow_interval);
-				        	$.paused = true;
-				        }
+							$.paused = true;
+						}
       					$(this).attr("src", src);
 					    return false;
 				    });

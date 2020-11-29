@@ -46,7 +46,8 @@
 				slide_counter: 1,
 				slide_captions: 0,
 				slide_interval: 12000,
-				slides: [{
+				slides: [
+					{
 						image: 'images/f01.jpg'
 					},
 					{
@@ -105,7 +106,16 @@
 <body>
 
 
+	
+	
 
+	<div id="controls-wrapper"  style="position:relative;">
+		<div style="position: fixed;right:50%;bottom:50%">
+			<img src="images/play_dull.png" name="deleteme" align="absmiddle" width="50" height="50" id="onlyplay" />
+		</div>
+	</div>
+	
+	
 	<!--Loading display while images load-->
 	<div id="loading">&nbsp;</div>
 
@@ -115,7 +125,7 @@
 	<div id="prevthumb"></div>
 	<div id="nextthumb"></div>
 
-
+	
 
 
 	<!--Control Bar-->
@@ -129,15 +139,16 @@
 
 			<!--Slide captions displayed here-->
 			<div id="slidecaption"></div>
-
+			
 			<!--Navigation-->
 			<div id="navigation">
 				<a href="javascript:;"
-					onclick="window.location.href='http://www.to-en.gr/home.htm';">Home</a>&nbsp;&nbsp; <img
-					src="images/back_dull.png" name="prevslide" width="24" height="24" align="absmiddle"
-					id="prevslide" /><img src="images/pause_dull.png" name="pauseplay" align="absmiddle"
-					id="pauseplay" /><img src="images/forward_dull.png" name="nextslide" align="absmiddle"
-					id="nextslide" /> </div>
+					onclick="window.location.href='http://www.to-en.gr/home.htm';">Home</a>&nbsp;&nbsp; 
+					<img src="images/back_dull.png" name="prevslide" width="24" height="24" align="absmiddle" id="prevslide" />
+					<img src="images/play_dull.png" name="pauseplay" align="absmiddle" id="pauseplay" />
+					<img src="images/forward_dull.png" name="nextslide" align="absmiddle" id="nextslide" /> 
+			</div>
+
 
 		</div>
 	</div>
@@ -150,20 +161,24 @@
 		</div>
 
 		<script>
-			var audioElement = document.getElementById("player");
-			console.log(audioElement);
-			var playPromise = audioElement.play();
-			if (playPromise !== undefined) {
-				playPromise.then(_ => {
-						// Automatic playback started!
-						// Show playing UI.
-						console.log("goodboy")
-					})
-					.catch(error => {
-						var controlsattribute=document.createAttribute("controls");
-						audioElement.setAttributeNode(controlsattribute);
-					});
-			}
+			var slidebegin=document.getElementById("onlyplay");
+			slidebegin.addEventListener("click",function(){
+				var audioElement = document.getElementById("player");
+				if(audioElement.paused){
+					audioElement.play();
+				}else{
+					audioElement.pause();
+				}
+			});
+			var slidebegin=document.getElementById("pauseplay");
+			slidebegin.addEventListener("click",function(){
+				var audioElement = document.getElementById("player");
+				if(audioElement.paused){
+					audioElement.play();
+				}else{
+					audioElement.pause();
+				}
+			});
 		</script>
 	</div>
 
