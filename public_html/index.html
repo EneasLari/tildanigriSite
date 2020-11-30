@@ -77,7 +77,7 @@
 <body>
 
 	<div id="container">
-		<video preload="auto" id="player_a" class="projekktor" poster="projector/1.jpg" title="to en" width="840"
+		<video preload="auto" id="player_a" class="projekktor" poster="img/index-backgroundOFF.png" title="to en" width="840"
 			height="500" controls autoplay="autoplay" onended="window.location = 'home.htm';">
 
 			<source src="1.ogg" type="video/ogg" />
@@ -164,6 +164,11 @@
 	<script type="text/javascript">
 		var playbutton = document.getElementById("playVideo")
 		var video = document.getElementById("player_a");
+		video.onplay=function(){
+			if(playbutton!== undefined){
+				playbutton.remove();
+			}	
+		};
 		playbutton.addEventListener("click", function () {
 			video.play();
 			playbutton.remove();
