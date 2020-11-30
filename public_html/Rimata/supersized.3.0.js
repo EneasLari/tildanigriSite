@@ -125,29 +125,25 @@ Website: www.buildinternet.com/project/supersized
 					});
 					
 				    //Play/Pause Button
-					$('img[name ="deleteme"]').ready(function() {
-						console.log("Ready");
-				    	if($.inAnimation) return false;
-				    	var src = ($(this).attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png";
-						$(this).attr("src", "images/pause.png");
-						console.log(src);
+					$('#onlyplay').ready(function() {
+						if($.inAnimation) return false;
 						clearInterval(slideshow_interval);
 						$.paused = true;
-						$(this).attr("src", src);
+						//update the little buttons
+						var src = ($('#pauseplay').attr("src") === "images/play.png") ? "images/pause_dull.png" : "images/play_dull.png";
+						$.paused = true;
+						$('#pauseplay').attr("src", src);
 						return false;
 				    });
 
 
 					$('#onlyplay').click(function() {
 						if($.inAnimation) return false;
-						console.log(($('#pauseplay').attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png");
-						var src = ($(this).attr("src") === "images/play.png") ? "images/pause.png" : "images/play.png";
-						console.log(src);
-      					if (src == "images/pause.png"){
-							$('#pauseplay').attr("src", "images/play.png");
+						var src = ($('#pauseplay').attr("src") === "images/play_dull.png") ? "images/pause_dull.png" : "images/play_dull.png";
+						if (src == "images/pause_dull.png"){
+							$('#pauseplay').attr("src", "images/play_dull.png");
       						$.paused = false;
 							slideshow_interval = setInterval(nextslide, options.slide_interval); 
-							console.log("MOMOMOMO");
 							$(this).remove();
 							
 				        }else{
@@ -160,16 +156,16 @@ Website: www.buildinternet.com/project/supersized
 					});
 					
 					$('#onlyplay').mouseover(function() {
-				    	var imagecheck = ($(this).attr("src") === "images/play_dull.png");
+						var imagecheck = ($(this).attr("src") === "images/play_dull.png");
 				    	if (imagecheck){
-      						$(this).attr("src", "images/play.png"); 
+							  $(this).attr("src", "images/play.png"); 
 				        }else{
-				        	$(this).attr("src", "images/pause.png");
+							$(this).attr("src", "images/pause.png");
 				        }
 				    });
 				    
 				    $('#onlyplay').mouseout(function() {
-				    	var imagecheck = ($(this).attr("src") === "images/play.png");
+						var imagecheck = ($(this).attr("src") === "images/play.png");
 				    	if (imagecheck){
       						$(this).attr("src", "images/play_dull.png"); 
 				        }else{
@@ -200,11 +196,11 @@ Website: www.buildinternet.com/project/supersized
 					    return false;
 				    });
 				    $('#pauseplay').mouseover(function() {
-				    	var imagecheck = ($(this).attr("src") === "images/play_dull.png");
+						var imagecheck = ($(this).attr("src") === "images/play_dull.png");
 				    	if (imagecheck){
-      						$(this).attr("src", "images/play.png"); 
+							  $(this).attr("src", "images/play.png"); 
 				        }else{
-				        	$(this).attr("src", "images/pause.png");
+							$(this).attr("src", "images/pause.png");
 				        }
 				    });
 				    

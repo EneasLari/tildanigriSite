@@ -155,7 +155,7 @@
 
 	<div id="controls-wrapper"  style="position:relative;">
 		<div style="position: fixed;right:10px;bottom:10px">
-			<audio id="player" autoplay>
+			<audio id="player">
 				<source src="Rimata.mp3" type="audio/mp3">
 			</audio>
 		</div>
@@ -163,9 +163,7 @@
 		<script>
 			var slidebegin=document.getElementById("onlyplay");
 			var audioElement = document.getElementById("player");
-			if(audioElement.play){
-				slidebegin.remove();
-			}
+
 			slidebegin.addEventListener("click",function(){
 				if(audioElement.paused){
 					audioElement.play();
