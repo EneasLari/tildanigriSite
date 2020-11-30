@@ -162,17 +162,17 @@
 
 		<script>
 			var slidebegin=document.getElementById("onlyplay");
+			var audioElement = document.getElementById("player");
+			if(audioElement.play){
+				slidebegin.remove();
+			}
 			slidebegin.addEventListener("click",function(){
-				var audioElement = document.getElementById("player");
 				if(audioElement.paused){
 					audioElement.play();
-				}else{
-					audioElement.pause();
 				}
 			});
 			var slidebegin=document.getElementById("pauseplay");
 			slidebegin.addEventListener("click",function(){
-				var audioElement = document.getElementById("player");
 				if(audioElement.paused){
 					audioElement.play();
 				}else{
