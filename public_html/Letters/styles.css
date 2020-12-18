@@ -23,10 +23,12 @@ body {
 	color: #000000; 
 	font-family: Georgia, "Times New Roman", Times, serif; 
 	font-size: 18px;
+	background-color: bisque;
 }
 .style6 {
 	font-size: 24px;
 	font-weight: bold;
+	background-color: #C987CE;
 }
 .style7 {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
@@ -70,7 +72,17 @@ a:active {
 	text-decoration: underline!important;
 }
 	 
-	 
+@media only screen and (min-width: 768px){
+	.style2 {
+		font-size: 10vw;
+	}
+	.style6 {
+		font-size: 10vw;
+	}
+	.style5 {
+		font-size: 7vw;
+	}
+}	 
 	
 a.la { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline; }
 a.la:visited { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline;}
