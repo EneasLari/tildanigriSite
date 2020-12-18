@@ -5,43 +5,48 @@ body {
 	margin-bottom: 0px;
 	background-repeat: repeat-y;
 	background-color: #FFF8E8;
-	background-image:    url("images/block.jpg");
+	background-image: url("images/block.jpg");
 
-	SCROLLBAR-FACE-COLOR: #C987CE; 
-	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
-	SCROLLBAR-SHADOW-COLOR: #0099ff; 
-	SCROLLBAR-3DLIGHT-COLOR: #0099ff; 
-	SCROLLBAR-ARROW-COLOR: #FFFF01; 
-	SCROLLBAR-TRACK-COLOR: #FFFF01; 
+	SCROLLBAR-FACE-COLOR: #C987CE;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #0099ff;
+	SCROLLBAR-3DLIGHT-COLOR: #0099ff;
+	SCROLLBAR-ARROW-COLOR: #FFFF01;
+	SCROLLBAR-TRACK-COLOR: #FFFF01;
 	SCROLLBAR-DARKSHADOW-COLOR: #0099ff;
 }
+
 .style2 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 36px;
 }
+
 .style5 {
-	color: #000000; 
-	font-family: Georgia, "Times New Roman", Times, serif; 
+	color: #000000;
+	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 18px;
-	background-color: bisque;
 }
+
 .style6 {
 	font-size: 24px;
 	font-weight: bold;
-	background-color: #C987CE;
 }
+
 .style7 {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	color: #882288;
 	font-weight: bold;
-}a:link {
+}
+
+a:link {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	color: #882288;
 	text-decoration: none;
 }
+
 a:visited {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -49,6 +54,7 @@ a:visited {
 	color: #882288;
 	text-decoration: none;
 }
+
 a:hover {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -56,6 +62,7 @@ a:hover {
 	color: #882288;
 	text-decoration: underline;
 }
+
 a:active {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -63,28 +70,114 @@ a:active {
 	color: #882288;
 	text-decoration: none;
 }
+
 .note {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 12px;
 	font-style: italic;
 	color: #333333;
 	font-weight: bold;
-	text-decoration: underline!important;
+	text-decoration: underline !important;
 }
-	 
-@media only screen and (min-width: 768px){
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 360px) and (max-device-width: 1024px)  {
+
+
 	.style2 {
-		font-size: 10vw;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 30px;
 	}
-	.style6 {
-		font-size: 10vw;
-	}
-	.style5 {
-		font-size: 7vw;
-	}
-}	 
 	
-a.la { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline; }
-a.la:visited { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline;}
-a.la:active { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline; }
-a.la:hover { font-family:Georgia, "Times New Roman", Times, serif;color:#882288; font-size: 17px; text-decoration:underline; }
+	.style5 {
+		color: #000000;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size:30px;
+	}
+	
+	.style6 {
+		font-size:30px;
+		font-weight: bold;
+	}
+	
+	.style7 {
+		font-family: Geneva, Arial, Helvetica, sans-serif;
+		font-size: 30px;
+		color: #882288;
+		font-weight: bold;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	/* tr { border: 1px solid #ccc; } */
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		/* border-bottom: 1px solid #eee;  */
+		position: relative;
+		padding-left: 60px; 
+	}
+	
+	style
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+#audiotoplay{
+	margin: auto;
+	width:100%;
+	border: 3px solid green;
+	padding: 10px;
+}
+
+}
+
+a.la {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #882288;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+a.la:visited {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #882288;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+a.la:active {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #882288;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+a.la:hover {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #882288;
+	font-size: 17px;
+	text-decoration: underline;
+}
+

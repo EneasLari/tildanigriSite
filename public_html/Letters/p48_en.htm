@@ -6,9 +6,11 @@
   <link rel="shortcut icon" href="../logo.png">
   <link href="styles.css" rel="stylesheet" type="text/css">
   <link href="../scrollingtitle.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
+  
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top"><img src="images/block_guide.jpg" width="140" height="89"></td>
@@ -33,6 +35,7 @@
                   <p id="inlinetext">Melina Tanagri, "Melina ap to meli" (Melina from honey), Nothing doesn't mean
                     anything, 3:12 </p>
                 </div>
+                <div id="songSlider" onclick="setSongPosition(this,event)"></div>
                 <audio controls id="audiotoplay" src="mp3/p48.mp3" type="audio/mpeg"></audio>
                 <script>
                   var titlediv = document.getElementById("scrollingTitle");
@@ -47,9 +50,9 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" class="style5" style="display: block;">
-              <div align="justify" style="display: block;">
-                <p style="display: block;"><span class="style6">I</span> think I've run dry now ... I'm tired from both the words and the
+            <td valign="top" class="style5" >
+              <div align="justify" >
+                <p><span class="style6">I</span> think I've run dry now ... I'm tired from both the words and the
                   conclusions ... besides, what value do they have, if they all get reconsidered?<br>
                   <br>
                   The conclusions are valid only for the given moment, afterwards another understanding comes, another
@@ -58,11 +61,11 @@
                  
               </div>
             </td>
-            <td valign="top" style="display: block;">
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="display: block;">
+            <td valign="top"  id="imagetotop">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" >
                 <tr>
-                  <td style="display: block;">
-                    <div ><img src="images/p48_clip_image002.jpg"> </div>
+                  <td >
+                    <div ><img src="images/p48_clip_image002.jpg" id="imagetotop"> </div>
                   </td>
                 </tr>
               </table>
@@ -81,7 +84,7 @@
                 love you. </p>
             </td>
           </tr>
-          <script>
+          <!-- <script>
             var text=document.getElementsByClassName("style5")[0];
             var style = window.getComputedStyle(text, null).getPropertyValue('font-size');
             if(window.innerWidth>700){
@@ -90,7 +93,7 @@
             }
             console.log(parseFloat(style))
             console.log(parseFloat(style)*(100/(window.innerWidth)) )
-          </script>
+          </script> -->
           <tr>
             <td colspan="2" valign="top">&nbsp;</td>
           </tr>
@@ -114,9 +117,10 @@
             </td>
           </tr>
         </table>
+
       </td>
     </tr>
   </table>
 </body>
-
+<script src="./framework/js/SSUhtml5Audio.js"></script>
 </html>
