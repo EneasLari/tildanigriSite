@@ -2,6 +2,19 @@ const fs = require('fs');
 var paths = []
 var recursives = 0
 
+
+var tag=`<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HBRWE2HJJX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HBRWE2HJJX');
+</script>
+</head>
+`
+
 var started = false;
 function consolelogofile(message) {
     //console.log(message)
@@ -80,7 +93,7 @@ function readfiles(path, outputpath) {
                     var data = fs.readFileSync(path + "/" + myfile, 'utf8')
                     if (data.includes('</head>')) {
                         //console.log("HHEAD FOUND")
-                        data = data.replace('</head>', "foxyyyyyyyyyyy")
+                        data = data.replace('</head>', tag)
                         try {
                             fs.writeFileSync(outputpath + '/' + path + '/' + myfile, data)
 
@@ -89,7 +102,7 @@ function readfiles(path, outputpath) {
                         }
                     }else{
                         consolelogofile("WIHTOUT <head> TAG"+outputpath + '/' + path + '/' + myfile)
-                        fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
+                        //fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
                     }
                 } catch (error) {
                     console.error(error);
@@ -100,7 +113,7 @@ function readfiles(path, outputpath) {
                 var dest = outputpath + '/' + path + '/' + myfile
                 var st = "LETS COPY: " + src + " ==> " + dest
                 try {
-                    fs.copyFileSync(src, dest)
+                    //fs.copyFileSync(src, dest)
                 } catch (error) {
                     var st = "Problem with copying file: " + src + " ==> " + dest
                     consolelogofile(st)
