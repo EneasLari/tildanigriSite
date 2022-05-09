@@ -89,6 +89,7 @@ function readfiles(path, outputpath) {
                         }
                     }else{
                         consolelogofile("WIHTOUT <head> TAG"+outputpath + '/' + path + '/' + myfile)
+                        fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
                     }
                 } catch (error) {
                     console.error(error);
