@@ -1,87 +1,91 @@
-const { Console } = require('console');
 const fs = require('fs');
 var paths = []
 var recursives = 0
-const getDirectories = (source, outputpath, callback) =>
-    fs.readdir(source, { withFileTypes: true }, (err, files) => {
-        if (err) {
-            callback(err)
-        } else {
-            //delete only the first time the output directory
+
+var started=false;
+function consolelogofile(message){
+    console.log(message)
+    if(started){
+        fs.appendFileSync("LOGS.TXT",message+"\n")
+    }else{
+        started=true
+        fs.writeFileSync("LOGS.TXT","LOG START\n")    
+    }
+    
+}
+
+
+function editHtmlFilesAndCopyTheOther(source, outputpath) {
+
+    var filesRead = fs.readdirSync(source, { withFileTypes: true })
+    //delete only the first time the output directory
+    if (recursives === 0) {
+        deletedirectories(outputpath)
+    }
+    filesRead.forEach(element => {
+        if (element.isDirectory()) {
+            recursives++
+            editHtmlFilesAndCopyTheOther(source + '/' + element.name, outputpath)
+            //////////
+            paths.push(source + '/' + element.name)
+            recursives--
             if (recursives === 0) {
-                deletedirectories(outputpath)
+                consolelogofile("LETS CREATE PATHS")
+                paths.forEach(existinpath => {
+                    //consolelogofile("kav2/" + element)
+                    createDirectories(outputpath, existinpath)
+
+                });
+                consolelogofile("LETS ADD FILES")
+                paths.forEach(path => {
+                    readfiles(path, outputpath)
+                })
             }
-            files.forEach(element => {
-                if (element.isDirectory()) {
-                    recursives++
-                    getDirectories(source + '/' + element.name, outputpath, (directories) => {
-                        paths.push(source + '/' + element.name)
-                        recursives--
-                        if (recursives === 0) {
-
-                            paths.forEach(existinpath => {
-                                //console.log("kav2/" + element)
-                                createDirectories(outputpath, existinpath)
-
-                            });
-                            console.log("Finished CREATING DIRECTORIES")
-                            paths.forEach(path => {
-                                readfiles(path, outputpath)
-                            })
-                        }
-                    })
-                } 
-            });
-            callback(
-                files
-                    .filter(dirent => dirent.isDirectory())
-                    .map(dirent => dirent.name)
-            )
-
+            //////////
         }
-    })
-
+    });
+}
 
 function deletedirectories(outputpath) {
-    console.log(outputpath)
+    //consolelogofile(outputpath)
     if (fs.existsSync(outputpath)) {
-        //console.log('Directory exists!Lets Delete it');
+        //consolelogofile('Directory exists!Lets Delete it');
         // delete directory recursively
         try {
             fs.rmSync(outputpath, { recursive: true });
 
-            //console.log(`${outputpath} is deleted!`);
+            //consolelogofile(`${outputpath} is deleted!`);
         } catch (err) {
             console.error(`Error while deleting ${outputpath}.`);
         }
 
     }
 
-    console.log("DIRECTORIES DELETED")
+    //consolelogofile("DIRECTORIES DELETED")
 }
 
 function createDirectories(outputpath, element) {
     try {
         fs.mkdirSync(outputpath + '/' + element, { recursive: true });
-        //console.log("Directory is created.");
+        //consolelogofile("Directory is created.");
     } catch (error) {
         console.error(`Error while creating ${outputpath + '/' + element}.`);
     }
-    //console.log("CREATED DIRECTORY: ", outputpath + '/' + element,)
+    //consolelogofile("CREATED DIRECTORY: ", outputpath + '/' + element,)
 }
 
 function readfiles(path, outputpath) {
-    //console.log("files")
+    //consolelogofile("files")
     try {
         var files = fs.readdirSync(path)
-        //console.log(path,files)
+        //consolelogofile(path,files)
         files.forEach(file => {
             if (file.includes('.htm')) {
-                //console.log(">>>>>", file);
+                //consolelogofile(">>>>>", file);
                 try {
                     var data = fs.readFileSync(path + "/" + file, 'utf8')
                     if (data.includes('</head>')) {
-                        //console.log("HHEAD FOUND")
+                        //consolelogofile("HHEAD FOUND")
                         data = data.replace('</head>', "foxyyyyyyyyyyy")
                         try {
                             fs.writeFileSync(outputpath + '/' + path + '/' + file, data)
@@ -99,12 +103,11 @@ function readfiles(path, outputpath) {
                 var dest = outputpath + '/' + path + '/' + file
                 //
                 try {
-                    console.log(src,dest)
                     fs.copyFileSync(src, dest)
-                    //console.log("COPIED: ", src + " ==> " + dest)
+                    //consolelogofile("COPIED: ", src + " ==> " + dest)
                 } catch (error) {
-                    //console.log('NOW??',path + "/" + file)
-                    console.log("Problem with copying file: ", src + "==>" + dest)
+                    //consolelogofile('NOW??',path + "/" + file)
+                    //consolelogofile("Problem with copying file: ", src + " ==> " + dest)
                 }
             }
         });
@@ -115,5 +118,4 @@ function readfiles(path, outputpath) {
 
 }
 
-getDirectories('public_html', 'OUT_public_html', () => {
-})
+editHtmlFilesAndCopyTheOther('public_html', 'OUT_public_html')
