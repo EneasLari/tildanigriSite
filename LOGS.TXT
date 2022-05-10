@@ -1,2 +1,0 @@
-LOG START
-WIHTOUT <head> TAG:OUT/public_html/Colours/cover.html
