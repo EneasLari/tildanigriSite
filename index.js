@@ -39,11 +39,9 @@ function editHtmlFilesAndCopyTheOther(source, outputpath) {
     //delete only the first time the output directory
     filesRead.forEach(element => {
         if (element.isDirectory()) {
-            recursives++
             editHtmlFilesAndCopyTheOther(source + '/' + element.name, outputpath)
             //////////
             paths.push(source + '/' + element.name)
-            recursives--
 
             //////////
         }
@@ -79,7 +77,7 @@ function createDirectories(outputpath, element) {
 }
 
 function readfiles(path, outputpath) {
-    console.log(path)
+    //console.log(path)
     try {
         var filesindir = fs.readdirSync(path)
         
@@ -103,7 +101,7 @@ function readfiles(path, outputpath) {
                         }
                     }else{
                         consolelogofile("WIHTOUT <head> TAG"+outputpath + '/' + path + '/' + myfile)
-                        //fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
+                        fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
                     }
                 } catch (error) {
                     console.error(error);
