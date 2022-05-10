@@ -98,6 +98,15 @@ $(document).ready(function(){
 -->
 		
 </style>
+<!--GOOGLEANALYTICS-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY23HG35ES"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EY23HG35ES');
+</script>
+<!--ENDGOOGLEANALYTICS-->
 </head>
 
 <body>

@@ -10,11 +10,10 @@ var tag=`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-EY23HG35ES');
 </script>
 <!--ENDGOOGLEANALYTICS-->
-</head
+</head>
 `
 
 var started = false;
