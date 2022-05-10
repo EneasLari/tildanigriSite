@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "iso-8859-7": "^3.0.4"
+  }
+}

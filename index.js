@@ -1,5 +1,7 @@
-const fs = require('fs');
+import  fs  from 'fs';
 var paths = []
+import {encode, decode, labels} from 'iso-8859-7';
+var counter=0
 
 
 var tag=`
@@ -76,7 +78,7 @@ function createDirectories(outputpath, element) {
     //console.log("CREATED DIRECTORY: ", outputpath + '/' + element,)
 }
 
-function readfiles(path, outputpath) {
+function EditFilesInfolder(path, outputpath) {
     //console.log(path)
     try {
         var filesindir = fs.readdirSync(path)
@@ -87,9 +89,13 @@ function readfiles(path, outputpath) {
                 console.log(fs.existsSync(path + "/" + myfile))
             }
             if (myfile.includes('.htm')) {
-                //console.log(">>>>>", file);
                 try {
-                    var data = fs.readFileSync(path + "/" + myfile, 'utf8')
+                    var data = fs.readFileSync(path + "/" + myfile)
+                    data = decode(data);
+                    if(!data.includes('charset=iso-8859-7')){
+                        counter++
+                        console.log("NOT FOUND ISO:",counter ,  path + "/" + myfile)
+                    }
                     if (data.includes('</head>')) {
                         //console.log("HHEAD FOUND")
                         data = data.replace('</head>', tag)
@@ -101,7 +107,7 @@ function readfiles(path, outputpath) {
                         }
                     }else{
                         consolelogofile("WIHTOUT <head> TAG"+outputpath + '/' + path + '/' + myfile)
-                        fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
+                        //fs.copyFileSync(path + "/" + myfile, outputpath + '/' + path + '/' + myfile)
                     }
                 } catch (error) {
                     console.error(error);
@@ -137,10 +143,10 @@ function RunMe(out,sourcefolder){
     paths.forEach(existinpath => {
         //console.log("kav2/" + element)
         createDirectories(out, existinpath)
-        readfiles(existinpath, out)
+        EditFilesInfolder(existinpath, out)
     
     });
-    readfiles(sourcefolder,out)
+    EditFilesInfolder(sourcefolder,out)
 }
 
 RunMe("OUT","public_html")
